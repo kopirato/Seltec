@@ -18,6 +18,12 @@
       <a href="projects.html"><i class="fas fa-folder-open"></i> Projects</a>
       <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
     </nav>
+
+    <!-- Dark Mode Toggle -->
+    <button id="theme-toggle" class="theme-btn">
+      <i class="fas fa-moon"></i>
+    </button>
+
     <div class="social-icons">
       <a href="https://github.com/selian" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://linkedin.com/in/selian" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -48,10 +54,10 @@
 
       <!-- Project 2 -->
       <div class="project-card">
-        <img src="https://img.icons8.com/color/480/worldwide-location.png" alt="Travel Blog">
+        <img src="https://img.icons8.com/color/480/worldwide-location.png" alt="Farmers Portal">
         <div class="overlay">
           <h3>Dorper Farmers Portal</h3>
-          <p>Dorper Farmers Portal Blog Website – A knowledge-sharing platform tailored for Dorper sheep farmers. It provides blog articles, health tips, breeding guides, and feed management insights to help farmers improve flock productivity and connect with the community.</p>
+          <p>A knowledge-sharing blog platform for Dorper sheep farmers, offering health tips, breeding guides, and feed management insights.</p>
           <a href="https://kopirato.github.io/Portal/" target="_blank" class="btn">View Project</a>
         </div>
       </div>
@@ -74,5 +80,29 @@
   <footer>
     <p>&copy; 2025 SelianTec. All rights reserved.</p>
   </footer>
+
+  <!-- Dark/Light Mode Script -->
+  <script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    // Load saved theme
+    if (localStorage.getItem("theme") === "light") {
+      body.classList.add("light");
+      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("light");
+
+      if (body.classList.contains("light")) {
+        toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        localStorage.setItem("theme", "light");
+      } else {
+        toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        localStorage.setItem("theme", "dark");
+      }
+    });
+  </script>
 </body>
-  </html>
+        </html>
