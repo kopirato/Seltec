@@ -3,105 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SelianTec | Portfolio</title>
+  <title>David Kopirato | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- FontAwesome for icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <h1 class="logo">SelianTec</h1>
-    <nav>
-      <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
-      <a href="about.html"><i class="fas fa-user"></i> About</a>
-      <a href="projects.html"><i class="fas fa-folder-open"></i> Projects</a>
-      <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
-    </nav>
-
-    <!-- Dark/Light Mode Toggle -->
-    <button id="theme-toggle" class="theme-btn">
-      <i class="fas fa-moon"></i>
-    </button>
-
-    <div class="social-icons">
-      <a href="https://github.com/selian" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/selian" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:selian@example.com"><i class="fas fa-envelope"></i></a>
+    <div class="container">
+      <h1>David Kopirato</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="theme-toggle">🌙</button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h2>Welcome to My Portfolio</h2>
-    <p>Showcasing my work in tech, data, and web development.</p>
-    <a href="projects.html" class="btn hero-btn">Explore Projects</a>
-  </section>
-
-  <!-- Projects Preview -->
-  <section class="projects">
-    <h2>Featured Projects</h2>
-    <div class="project-grid">
-      
-      <!-- Project 1 -->
-      <div class="project-card">
-        <img src="https://img.icons8.com/color/480/ms-excel.png" alt="Stock Tracking">
-        <div class="overlay">
-          <h3>Selelo Stock Tracking Excel Livebook</h3>
-          <p>Real-time stock and inventory management tool built in Excel.</p>
-          <a href="https://example.com/stock-tracker" target="_blank" class="btn">View Project</a>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-card">
-        <img src="https://img.icons8.com/color/480/worldwide-location.png" alt="Farmers Portal">
-        <div class="overlay">
-          <h3>Dorper Farmers Portal</h3>
-          <p>A knowledge-sharing blog platform for Dorper sheep farmers with guides and insights.</p>
-          <a href="https://kopirato.github.io/Portal/" target="_blank" class="btn">View Project</a>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-card">
-        <img src="https://img.icons8.com/color/480/cloud.png" alt="Weather App">
-        <div class="overlay">
-          <h3>Cheki Weather App</h3>
-          <p>AI-powered forecasts and real-time weather alerts.</p>
-          <a href="https://kopirato.github.io/Cheki-weather/" target="_blank" class="btn">View Project</a>
-        </div>
-      </div>
-
+  <section id="hero">
+    <div class="container hero-content">
+      <h2>Hi, I'm David, a Web & Software Designer</h2>
+      <p>I build interactive, modern websites and applications.</p>
     </div>
-    <a href="projects.html" class="btn more">View All Projects</a>
   </section>
 
-  <!-- Footer -->
+  <section id="about">
+    <div class="about-overlay">
+      <div class="container about-content">
+        <h2>About Me</h2>
+        <p>
+          I am passionate about creating user-friendly, beautiful software solutions. 
+          My work focuses on crafting interactive experiences, blending functionality 
+          with clean and modern design. 
+        </p>
+        <p>
+          Beyond coding, I enjoy teaching digital literacy in my community, 
+          helping kids and youth discover the power of technology.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skill">
+        <p>HTML & CSS</p>
+        <div class="skill-bar"><div class="skill-progress" style="width:90%"></div></div>
+      </div>
+      <div class="skill">
+        <p>JavaScript</p>
+        <div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div>
+      </div>
+      <div class="skill">
+        <p>React & Frameworks</p>
+        <div class="skill-bar"><div class="skill-progress" style="width:75%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+
+        <a class="project-card" href="https://github.com/selian/project1" target="_blank">
+          <img src="https://via.placeholder.com/400x250.png?text=Project+1" alt="Project 1">
+          <div class="overlay"><span>View Project</span></div>
+          <div class="project-info">
+            <h3>Project One</h3>
+            <p>A web app to manage tasks efficiently with real-time updates.</p>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://github.com/selian/project2" target="_blank">
+          <img src="https://via.placeholder.com/400x250.png?text=Project+2" alt="Project 2">
+          <div class="overlay"><span>View Project</span></div>
+          <div class="project-info">
+            <h3>Project Two</h3>
+            <p>Portfolio website built with React and CSS animations.</p>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://github.com/selian/project3" target="_blank">
+          <img src="https://via.placeholder.com/400x250.png?text=Project+3" alt="Project 3">
+          <div class="overlay"><span>View Project</span></div>
+          <div class="project-info">
+            <h3>Project Three</h3>
+            <p>Shared logistics system for small factories with real-time tracking.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="container">
+      <h2>Testimonials</h2>
+      <div class="carousel">
+        <div class="testimonial active">
+          <p>"David’s work is exceptional! Highly recommended."</p>
+          <h4>- Client A</h4>
+        </div>
+        <div class="testimonial">
+          <p>"Very creative and professional. Loved the UI design."</p>
+          <h4>- Client B</h4>
+        </div>
+        <div class="testimonial">
+          <p>"Delivered on time with amazing quality."</p>
+          <h4>- Client C</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:david@example.com">david@example.com</a></p>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2025 SelianTec. All rights reserved.</p>
+    <div class="container">
+      <p>© 2025 David Kopirato. All rights reserved.</p>
+    </div>
   </footer>
 
-  <!-- Dark/Light Mode Script -->
-  <script>
-    const toggleBtn = document.getElementById("theme-toggle");
-    const body = document.body;
+  <button id="back-to-top">↑</button>
 
-    if (localStorage.getItem("theme") === "light") {
-      body.classList.add("light");
-      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    }
-
-    toggleBtn.addEventListener("click", () => {
-      body.classList.toggle("light");
-      if (body.classList.contains("light")) {
-        toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-        localStorage.setItem("theme", "light");
-      } else {
-        toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-        localStorage.setItem("theme", "dark");
-      }
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
-      </html>
+        </html>
