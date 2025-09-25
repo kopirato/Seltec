@@ -26,4 +26,35 @@ window.addEventListener('scroll', () => {
 
 // Testimonials carousel
 let index = 0;
-const testimonials = document
+const testimonials = document.querySelectorAll('.testimonial');
+setInterval(() => {
+  testimonials[index].classList.remove('active');
+  index = (index + 1) % testimonials.length;
+  testimonials[index].classList.add('active');
+}, 4000);
+
+// Back to top button
+const backToTop = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 300){
+    backToTop.style.display = 'block';
+  } else {
+    backToTop.style.display = 'none';
+  }
+});
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top:0, behavior:'smooth' });
+});
+
+// Fade-in sections
+const sections = document.querySelectorAll('section');
+const reveal = () => {
+  sections.forEach(sec => {
+    const rect = sec.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 100){
+      sec.classList.add('show');
+    }
+  });
+};
+window.addEventListener('scroll', reveal);
+reveal();
